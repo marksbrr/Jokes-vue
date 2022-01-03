@@ -8,6 +8,7 @@
         @click="joke.isVisible = !joke.isVisible"
         text="Tell me"
       />
+
       <Button class="button" @click="deleteJoke(joke.id)" text="Delete" />
     </div>
   </div>

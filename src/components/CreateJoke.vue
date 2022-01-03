@@ -1,6 +1,6 @@
 <template>
   <div class="joke__container">
-    <form @submit="onSubmit">
+    <form @submit.prevent="onSubmit">
       <div class="input__container">
         <h4 class="input-header">Question</h4>
         <input v-model="questionValue" class="input-field" />
@@ -30,15 +30,15 @@ export default {
   },
   methods: {
     // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-    onSubmit(e) {
-      e.preventDefault();
-
+    onSubmit() {
       if (!this.questionValue) {
         alert(!this.questionValue && "Please add joke question");
+        return;
       }
 
       if (!this.answerValue) {
-        alert(!this.answerValue && "Please add joke question");
+        alert(!this.answerValue && "Please add joke answer");
+        return;
       }
 
       const newJoke = {

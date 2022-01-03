@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3>{{ joke.question }}</h3>
+    <h3 class="question-text">{{ joke.question }}</h3>
     <h3 v-if="!joke.isVisible">{{ joke.answer }}</h3>
   </div>
 </template>
@@ -14,4 +14,8 @@ export default {
   components: {},
 };
 </script>
-<style></style>
+<style>
+.question-text {
+  margin-bottom: 10px;
+}
+</style>

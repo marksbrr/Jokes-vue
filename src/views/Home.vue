@@ -10,7 +10,7 @@
       class="input-field"
       placeholder="Search in jokes.."
       v-model="filterValue"
-      @change="filteredJokes()"
+      @input="filteredJokes()"
     />
   </div>
 </template>
